@@ -1,5 +1,3 @@
-Title: Automated Inter Observer Reliability  and Training Script for Loopy Scorings including summary report on differences per
-Video and Behaviour.
 Author: Christian Blum, member of Thomas Bugnyar and Barbara Klump lab
 last updated: 2026-04-24
 
