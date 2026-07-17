@@ -1371,7 +1371,15 @@ would add up to 0s differences).")
     # all plots to one pdf:
     date_tag <- format(Sys.Date(), "%Y-%m-%d")
     safe_name <- gsub("[^A-Za-z0-9._-]", "_", placeholder_trainee)
-    pdf(paste0("IORT_", safe_name, "_results_", date_tag, ".pdf"))
+
+# Using cairo_pdf() instead of pdf() because the default pdf() device maps ASCII hyphens (-) 
+    # to typographic minus signs (−) in certain fonts. Cairo uses modern font rendering that 
+    # preserves the original characters as-is.
+    # I spent wayyy longer than I'd care to admit to figure this out. This way you can copy paste the 
+    # scoring titles directly out of the facet plot titles in the pdf. This was not possible before, or, 
+    # if you did, you always had to manually change the symbols in the Loopy search.
+    # Finally fixed!
+    cairo_pdf(paste0("IORT_", safe_name, "_results_", date_tag, ".pdf"))
         IORT.plot
         plot.new()
         grid.table(IORT.table)
