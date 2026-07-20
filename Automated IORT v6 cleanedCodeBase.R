@@ -1379,7 +1379,7 @@ would add up to 0s differences).")
     # scoring titles directly out of the facet plot titles in the pdf. This was not possible before, or, 
     # if you did, you always had to manually change the symbols in the Loopy search.
     # Finally fixed!
-    cairo_pdf(paste0("IORT_", safe_name, "_results_", date_tag, ".pdf"))
+    cairo_pdf(paste0("IORT_", safe_name, "_results_", date_tag, ".pdf"), onefile = TRUE)
         IORT.plot
         plot.new()
         grid.table(IORT.table)
