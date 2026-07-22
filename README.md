@@ -1,6 +1,4 @@
 Author: Christian Blum, member of Thomas Bugnyar and Barbara Klump lab
-last updated: 2026-04-24
-
 
 This is a script to calculate Inter Observer Reliability Test Scores using ICCs and explore differences between coders.
 
